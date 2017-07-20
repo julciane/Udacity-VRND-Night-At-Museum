@@ -4,6 +4,8 @@
 /Auto_VR/[Bb]uild/
 /Auto_VR/[Bb]uilds/
 /Auto_VR/Assets/AssetStoreTools*
+/Auto_VR/Assets/GoogleVR*
+/Auto_VR/Assets/Plugins*
 
 # Visual Studio 2015 cache directory
 /Auto_VR/.vs/
