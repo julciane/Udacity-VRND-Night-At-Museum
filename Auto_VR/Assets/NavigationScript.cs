@@ -18,4 +18,18 @@ public class NavigationScript : MonoBehaviour {
     {
         Camera.main.transform.position = _featurePoint.position;
     }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void ExitApp()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+         Application.Quit();         
+#endif
+    }
 }
