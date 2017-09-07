@@ -142,6 +142,7 @@ public class Waypoint : MonoBehaviour
 		Camera.main.transform.position 	= gameObject.transform.position;
 
         gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = false;
+        gameObject.transform.GetComponent<Canvas>().enabled = true;
     }
 
 
