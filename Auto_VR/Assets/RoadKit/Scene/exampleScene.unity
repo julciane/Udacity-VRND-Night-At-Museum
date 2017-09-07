@@ -116,13 +116,13 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 7176137}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -3.42}
+  m_LocalPosition: {x: 0, y: 0, z: -3.83}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.001}
   m_Children:
   - {fileID: 1098062740}
   - {fileID: 551472110}
   - {fileID: 1257861796}
-  m_Father: {fileID: 714857485}
+  m_Father: {fileID: 2139360832}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 71439327}
   - component: {fileID: 71439326}
   - component: {fileID: 71439325}
+  - component: {fileID: 71439328}
   m_Layer: 5
   m_Name: Button Skip
   m_TagString: Untagged
@@ -327,7 +328,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 71439326}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 71439328}
+        m_MethodName: DismissCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &71439326
@@ -363,6 +375,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 71439323}
+--- !u!114 &71439328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71439323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a9a17ca58de9c469637ffe815ba2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasInfo: {fileID: 1207976716}
 --- !u!1 &105918989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,7 +1179,7 @@ GameObject:
   - component: {fileID: 410436862}
   - component: {fileID: 410436861}
   m_Layer: 0
-  m_Name: Waypoint_Design
+  m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1174,6 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
+  _canvasInfo: {fileID: 2063449236}
   material: {fileID: 2100000, guid: d371549c5db7a3247bd86feff941c221, type: 2}
   color_hilight: {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   lerp_idle: 0.5
@@ -1355,13 +1380,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410436860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 269.6, y: 12.4, z: 330.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 679927752}
-  - {fileID: 2063449237}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 2102077513}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413024536
 GameObject:
@@ -1749,7 +1773,7 @@ GameObject:
   - component: {fileID: 533320135}
   - component: {fileID: 533320134}
   m_Layer: 0
-  m_Name: Waypoint_Trainning
+  m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1768,6 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
+  _canvasInfo: {fileID: 1207976716}
   material: {fileID: 2100000, guid: d371549c5db7a3247bd86feff941c221, type: 2}
   color_hilight: {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   lerp_idle: 0.5
@@ -1948,14 +1973,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 533320133}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 317.4, y: 25, z: 301.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1216684163}
-  - {fileID: 1207976717}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1234270221}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &551472109
 GameObject:
@@ -2090,11 +2114,11 @@ MonoBehaviour:
     lineCount: 4
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2239,7 +2263,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: c39eb20a45b03441480bbb03b76f0488, type: 2}
     - target: {fileID: 100000, guid: 5449ac7b24689334eb94f66bb9df21d0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 5449ac7b24689334eb94f66bb9df21d0, type: 3}
       propertyPath: m_Enabled
@@ -2570,7 +2594,7 @@ GameObject:
   - component: {fileID: 714857482}
   - component: {fileID: 714857481}
   m_Layer: 0
-  m_Name: Waypoint_Intro
+  m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2589,6 +2613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
+  _canvasInfo: {fileID: 7176137}
   material: {fileID: 2100000, guid: d371549c5db7a3247bd86feff941c221, type: 2}
   color_hilight: {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   lerp_idle: 0.5
@@ -2769,14 +2794,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 714857480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 251.08, y: 5.01, z: 388.75}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1312196002}
-  - {fileID: 7176138}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 2139360832}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &726605469
 Prefab:
@@ -3320,7 +3344,7 @@ GameObject:
   - component: {fileID: 831820005}
   - component: {fileID: 831820004}
   m_Layer: 0
-  m_Name: Waypoint_Final
+  m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3339,6 +3363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
+  _canvasInfo: {fileID: 848185084}
   material: {fileID: 2100000, guid: d371549c5db7a3247bd86feff941c221, type: 2}
   color_hilight: {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   lerp_idle: 0.5
@@ -3519,14 +3544,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 831820003}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 303.7, y: 8.9, z: 189.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 826097356}
-  - {fileID: 848185085}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1668035643}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &848185084
 GameObject:
@@ -3553,7 +3577,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 848185084}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -3.89}
+  m_LocalPosition: {x: 0, y: 0, z: -3.8899994}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.0009999999}
   m_Children:
   - {fileID: 579746102}
@@ -3561,7 +3585,7 @@ RectTransform:
   - {fileID: 2088751631}
   - {fileID: 1221357614}
   - {fileID: 1350334324}
-  m_Father: {fileID: 831820008}
+  m_Father: {fileID: 1668035643}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3708,14 +3732,14 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 877183608}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -5.2}
+  m_LocalPosition: {x: 0, y: 0, z: -5.199997}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.0009999999}
   m_Children:
   - {fileID: 2131600700}
   - {fileID: 1105612566}
   - {fileID: 1774537770}
   - {fileID: 2057871270}
-  m_Father: {fileID: 1005923827}
+  m_Father: {fileID: 1921905978}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4030,7 +4054,7 @@ GameObject:
   - component: {fileID: 1005923824}
   - component: {fileID: 1005923823}
   m_Layer: 0
-  m_Name: Waypoint_Education
+  m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4049,6 +4073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
+  _canvasInfo: {fileID: 877183608}
   material: {fileID: 2100000, guid: d371549c5db7a3247bd86feff941c221, type: 2}
   color_hilight: {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   lerp_idle: 0.5
@@ -4229,14 +4254,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1005923822}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 303.7, y: 15.8, z: 255.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1366388904}
-  - {fileID: 877183609}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1921905978}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1027950707
 GameObject:
@@ -4460,7 +4484,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: c39eb20a45b03441480bbb03b76f0488, type: 2}
     - target: {fileID: 100000, guid: 5449ac7b24689334eb94f66bb9df21d0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 5449ac7b24689334eb94f66bb9df21d0, type: 3}
       propertyPath: m_Enabled
@@ -4878,15 +4902,15 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1207976716}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -4.17}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4.1700134}
   m_LocalScale: {x: 0.010000007, y: 0.01, z: 0.0010000009}
   m_Children:
   - {fileID: 2089818730}
   - {fileID: 1750601843}
   - {fileID: 1692205490}
   - {fileID: 71439324}
-  m_Father: {fileID: 533320138}
+  m_Father: {fileID: 1234270221}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5212,11 +5236,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5236,6 +5260,36 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1224809431}
+--- !u!1 &1234270220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1234270221}
+  m_Layer: 0
+  m_Name: Waypoint_Trainning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1234270221
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234270220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 317.4, y: 25, z: 301.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 533320138}
+  - {fileID: 1207976717}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1240602966
 Prefab:
   m_ObjectHideFlags: 0
@@ -5309,6 +5363,7 @@ GameObject:
   - component: {fileID: 1257861799}
   - component: {fileID: 1257861798}
   - component: {fileID: 1257861797}
+  - component: {fileID: 1257861800}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5373,7 +5428,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1257861798}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1257861800}
+        m_MethodName: DismissCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1257861798
@@ -5409,6 +5475,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1257861795}
+--- !u!114 &1257861800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257861795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a9a17ca58de9c469637ffe815ba2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasInfo: {fileID: 7176137}
 --- !u!1001 &1262611106
 Prefab:
   m_ObjectHideFlags: 0
@@ -6264,6 +6342,36 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 437110, guid: 3ece98cef98dc3a48a6beb9c58333554, type: 2}
   m_PrefabInternal: {fileID: 1620602449}
+--- !u!1 &1668035642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1668035643}
+  m_Layer: 0
+  m_Name: Waypoint_Final
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1668035643
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1668035642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 303.7, y: 8.9, z: 189.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 831820008}
+  - {fileID: 848185085}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1692205489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6769,6 +6877,7 @@ GameObject:
   - component: {fileID: 1815036001}
   - component: {fileID: 1815036000}
   - component: {fileID: 1815035999}
+  - component: {fileID: 1815036002}
   m_Layer: 5
   m_Name: Button Skip
   m_TagString: Untagged
@@ -6833,7 +6942,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1815036000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1815036002}
+        m_MethodName: DismissCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1815036000
@@ -6869,6 +6989,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1815035997}
+--- !u!114 &1815036002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815035997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a9a17ca58de9c469637ffe815ba2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasInfo: {fileID: 2063449236}
 --- !u!1001 &1871806900
 Prefab:
   m_ObjectHideFlags: 0
@@ -7083,6 +7215,36 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 437110, guid: 2a6b0c491d6b87d41ba699ccaf7834fd, type: 2}
   m_PrefabInternal: {fileID: 1918984340}
+--- !u!1 &1921905977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1921905978}
+  m_Layer: 0
+  m_Name: Waypoint_Education
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1921905978
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921905977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 303.7, y: 15.8, z: 255.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1005923827}
+  - {fileID: 877183609}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1927598196 stripped
 Transform:
   m_PrefabParentObject: {fileID: 482300, guid: 60270cf52a5e94998a5a335989159738, type: 2}
@@ -7372,6 +7534,7 @@ GameObject:
   - component: {fileID: 2057871273}
   - component: {fileID: 2057871272}
   - component: {fileID: 2057871271}
+  - component: {fileID: 2057871274}
   m_Layer: 5
   m_Name: Button Skip
   m_TagString: Untagged
@@ -7436,7 +7599,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2057871272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2057871274}
+        m_MethodName: DismissCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2057871272
@@ -7472,6 +7646,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2057871269}
+--- !u!114 &2057871274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057871269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a9a17ca58de9c469637ffe815ba2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasInfo: {fileID: 877183608}
 --- !u!1 &2063449236
 GameObject:
   m_ObjectHideFlags: 0
@@ -7496,15 +7682,15 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063449236}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: -0.7071068}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.0009999999}
+  m_LocalScale: {x: 0.0100000035, y: 0.01, z: 0.0010000004}
   m_Children:
   - {fileID: 1754825265}
   - {fileID: 2116225026}
   - {fileID: 1522689487}
   - {fileID: 1815035998}
-  m_Father: {fileID: 410436865}
+  m_Father: {fileID: 2102077513}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -270, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7880,6 +8066,36 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 437110, guid: 3ece98cef98dc3a48a6beb9c58333554, type: 2}
   m_PrefabInternal: {fileID: 2099165643}
+--- !u!1 &2102077512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2102077513}
+  m_Layer: 0
+  m_Name: Waypoint_Design
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2102077513
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102077512}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 269.6, y: 12.4, z: 330.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 410436865}
+  - {fileID: 2063449237}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116225025
 GameObject:
   m_ObjectHideFlags: 0
@@ -8152,3 +8368,33 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2131600699}
+--- !u!1 &2139360831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2139360832}
+  m_Layer: 0
+  m_Name: Waypoint_Intro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139360832
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2139360831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.08, y: 5.01, z: 388.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 714857485}
+  - {fileID: 7176138}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

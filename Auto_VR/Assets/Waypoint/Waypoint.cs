@@ -26,6 +26,8 @@ public class Waypoint : MonoBehaviour
 	private AudioSource _audio_source			= null;
 	private Material	_material				= null;
 
+    public GameObject _canvasInfo;
+
 	[Header("Material")]
 	public Material	material					= null;
 	public Color color_hilight					= new Color(0.8f, 0.8f, 1.0f, 0.125f);	
@@ -74,14 +76,15 @@ public class Waypoint : MonoBehaviour
         else
         {
             gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = true;
+			_canvasInfo.SetActive(false);
         }
 		
 		switch(_state)
 		{
 			case State.Idle:
 				Idle();
-				
-				_state 		= occupied ? State.Occupied : _state;
+                //_canvasInfo.SetActive(false);
+                _state 		= occupied ? State.Occupied : _state;
 				break;
 
 			case State.Focused:
@@ -91,7 +94,9 @@ public class Waypoint : MonoBehaviour
 			case State.Clicked:
 				Clicked();
 
-				bool scaled = _scale >= scale_clicked_max * .95f;
+                _canvasInfo.SetActive(true);
+
+                bool scaled = _scale >= scale_clicked_max * .95f;
 				_state 		= scaled ? State.Approaching : _state;
 				break;
 
@@ -102,7 +107,6 @@ public class Waypoint : MonoBehaviour
 				break;
 			case State.Occupied:
 				Hide();
-
 				_state = !occupied ? State.Idle : _state;
 				break;
 			
@@ -142,7 +146,6 @@ public class Waypoint : MonoBehaviour
 		Camera.main.transform.position 	= gameObject.transform.position;
 
         gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = false;
-        gameObject.transform.GetComponent<Canvas>().enabled = true;
     }
 
 
