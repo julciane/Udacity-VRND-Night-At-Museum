@@ -25,6 +25,7 @@ public class NavigationScript : MonoBehaviour {
     public void LoadFeature()
     {
         Camera.main.transform.position = _featurePoint.position;
+        Camera.main.transform.rotation = _featurePoint.rotation;
     }
 
     public void LoadScene(string sceneName)
