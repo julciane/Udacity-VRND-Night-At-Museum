@@ -2,12 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class NavigationScript : MonoBehaviour {
 
     public GameObject _canvasInfo;
     public Transform _originalPoint;
     public Transform _featurePoint;
+
+    private VideoPlayer videoPlayer;
+
+    private void Start()
+    {
+        videoPlayer = transform.GetComponentInChildren<VideoPlayer>();
+    }
 
     public void DismissCanvas()
     {
@@ -31,5 +39,21 @@ public class NavigationScript : MonoBehaviour {
 #else
          Application.Quit();         
 #endif
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(videoPlayer != null)
+        {
+            videoPlayer.Play();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (videoPlayer != null)
+        {
+            videoPlayer.Stop();
+        }
     }
 }
