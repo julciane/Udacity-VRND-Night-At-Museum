@@ -67,7 +67,7 @@ public class Waypoint : MonoBehaviour
 
 	void Update()
 	{
-		bool occupied 	= Camera.main.transform.position == gameObject.transform.position;
+		bool occupied 	= Camera.main.transform.parent.transform.position == gameObject.transform.position;
 
         if (occupied)
         {
@@ -143,7 +143,7 @@ public class Waypoint : MonoBehaviour
 		
 		_audio_source.Play();
 
-		Camera.main.transform.position 	= gameObject.transform.position;
+		Camera.main.transform.parent.transform.position 	= gameObject.transform.position;
 
         gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = false;
     }
