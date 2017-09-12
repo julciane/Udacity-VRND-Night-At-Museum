@@ -76,14 +76,12 @@ public class Waypoint : MonoBehaviour
         else
         {
             gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = true;
-			_canvasInfo.SetActive(false);
         }
 		
 		switch(_state)
 		{
 			case State.Idle:
 				Idle();
-                //_canvasInfo.SetActive(false);
                 _state 		= occupied ? State.Occupied : _state;
 				break;
 
@@ -118,10 +116,10 @@ public class Waypoint : MonoBehaviour
 				break;
 		}
 
-		gameObject.GetComponentInChildren<MeshRenderer>().material.color 	= _color;
+		/*gameObject.GetComponentInChildren<MeshRenderer>().material.color 	= _color;
 		gameObject.transform.localScale 									= Vector3.one * _scale;
 
-		_animated_lerp														= Mathf.Abs(Mathf.Cos(Time.time * scale_animation));
+		_animated_lerp														= Mathf.Abs(Mathf.Cos(Time.time * scale_animation));*/
 	}
 
 
