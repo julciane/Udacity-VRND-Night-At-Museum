@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MirrorRotation : MonoBehaviour {
     public Camera vrCamera;
-    private float _angle = 0;
+    private float _angle = 180;
     private Sides currentSide = Sides.Front;
     private enum Sides
     {
