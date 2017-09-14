@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 71dba9a2eb0fd724dbcc8bd1a1aaaa45
+  m_OcclusionCullingData: {fileID: 36300000, guid: 4f3b36f39630364449f5f78b10f24901,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -1662,11 +1663,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2776,7 +2777,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &410436862
 MonoBehaviour:
@@ -2853,7 +2854,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3362,7 +3363,6 @@ GameObject:
   - component: {fileID: 502722050}
   - component: {fileID: 502722049}
   - component: {fileID: 502722048}
-  - component: {fileID: 502722054}
   - component: {fileID: 502722053}
   - component: {fileID: 502722052}
   - component: {fileID: 502722056}
@@ -3477,25 +3477,6 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &502722054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 502722046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a40b544b8c3553c40852ae7ad35a9343, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vrModeEnabled: 1
-  distortionCorrectionEnabled: 1
-  neckModelScale: 0
-  autoUntiltHead: 1
-  UseUnityRemoteInput: 0
-  screenSize: 0
-  viewerType: 1
-  stereoScreenScale: 1
 --- !u!54 &502722055
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3866,7 +3847,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &533320135
 MonoBehaviour:
@@ -3943,7 +3924,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4120,17 +4101,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 544505871}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: -0.34348172, y: -0.61807793, z: -0.34348172, w: 0.61807793}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.010000003, y: 0.010000002, z: 0.0010000002}
   m_Children:
   - {fileID: 1405752673}
   m_Father: {fileID: 1430088877}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: -121.87599, y: 89.99999, z: -180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.9}
+  m_AnchoredPosition: {x: -0.502, y: 0.651}
   m_SizeDelta: {x: 1160, y: 710}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544505873
@@ -5443,7 +5424,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &714857482
 MonoBehaviour:
@@ -5520,7 +5501,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5832,14 +5813,14 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 784578350}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: -0.34348115, y: -0.61807835, z: -0.3434813, w: 0.61807805}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.010000007, z: 0.0010000009}
   m_Children:
   - {fileID: 1800302122}
   m_Father: {fileID: 1961182667}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: -121.876, y: 89.99999, z: -180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -6231,7 +6212,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &831820005
 MonoBehaviour:
@@ -6308,7 +6289,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8066,7 +8047,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &1005923824
 MonoBehaviour:
@@ -8143,7 +8124,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9384,11 +9365,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -13682,6 +13663,10 @@ Prefab:
       propertyPath: m_FontData.m_FontSize
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 172646, guid: 6dfff844c95f342d1a8a9ab165303662, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6dfff844c95f342d1a8a9ab165303662, type: 2}
   m_IsPrefabParent: 0
@@ -14003,7 +13988,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &1698392193
 Transform:
@@ -15483,11 +15468,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -17438,7 +17423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2063449237
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18046,11 +18031,11 @@ MonoBehaviour:
     lineCount: 6
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
