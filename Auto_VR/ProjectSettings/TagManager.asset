@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hilight
+  - Left_Waypoint
+  - Intro
+  - Design
+  - Training
+  - Education
+  - Final
+  - Canvas
+  - Waypoint
   layers:
   - Default
   - TransparentFX

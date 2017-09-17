@@ -65,18 +65,21 @@ public class Waypoint : MonoBehaviour
 	}
 
 
-	void Update()
+	/*void Update()
 	{
 		bool occupied 	= Camera.main.transform.parent.transform.position == gameObject.transform.position;
 
-        if (occupied)
+        /*if (occupied)
         {
             gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = false;
+            gameObject.transform.GetComponentInChildren<MeshCollider>().enabled = false;
         }
         else
         {
             gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = true;
-        }
+            gameObject.transform.GetComponentInChildren<MeshCollider>().enabled = true;
+            
+        }* /
 		
 		switch(_state)
 		{
@@ -92,7 +95,8 @@ public class Waypoint : MonoBehaviour
 			case State.Clicked:
 				Clicked();
 
-                _canvasInfo.SetActive(true);
+                WaypointManager.Instance.SetCurrent(gameObject.transform.parent.tag);
+                //_canvasInfo.SetActive(true);
 
                 bool scaled = _scale >= scale_clicked_max * .95f;
 				_state 		= scaled ? State.Approaching : _state;
@@ -115,12 +119,7 @@ public class Waypoint : MonoBehaviour
 			default:
 				break;
 		}
-
-		/*gameObject.GetComponentInChildren<MeshRenderer>().material.color 	= _color;
-		gameObject.transform.localScale 									= Vector3.one * _scale;
-
-		_animated_lerp														= Mathf.Abs(Mathf.Cos(Time.time * scale_animation));*/
-	}
+	}*/
 
 
 	public void Enter()
@@ -142,8 +141,10 @@ public class Waypoint : MonoBehaviour
 		_audio_source.Play();
 
 		Camera.main.transform.parent.transform.position 	= gameObject.transform.position;
+        WaypointManager.Instance.SetCurrent(gameObject.transform.parent.tag);
 
-        gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = false;
+        /*gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = false;
+        gameObject.transform.GetComponentInChildren<MeshCollider>().enabled = false;*/
     }
 
 
