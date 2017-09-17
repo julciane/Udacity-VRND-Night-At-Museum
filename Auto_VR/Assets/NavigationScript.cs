@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,7 +26,26 @@ public class NavigationScript : MonoBehaviour {
     public void LoadFeature()
     {
         Camera.main.transform.parent.transform.position = _featurePoint.position;
-        Camera.main.transform.parent.transform.rotation = _featurePoint.rotation;
+
+        //Camera.main.transform.parent.transform.rotation = _featurePoint.rotation;
+    }
+
+    private IEnumerator loadAsync()
+    {
+        Debug.Log("Load Feature!!");
+        videoPlayer = transform.GetComponentInChildren<VideoPlayer>();
+        if (videoPlayer != null)
+        {
+            videoPlayer.Stop();
+            while (videoPlayer.isPlaying)
+            {
+                yield return null;
+            }
+        }
+
+        Camera.main.transform.parent.transform.position = _featurePoint.position;
+
+        //Camera.main.transform.parent.transform.rotation = _featurePoint.rotation;
     }
 
     public void LoadScene(string sceneName)
@@ -55,6 +75,11 @@ public class NavigationScript : MonoBehaviour {
         if (videoPlayer != null)
         {
             videoPlayer.Stop();
+            while (videoPlayer.isPlaying)
+            {
+                Debug.Log("Not ready yet");
+            }
         }
+
     }
 }
