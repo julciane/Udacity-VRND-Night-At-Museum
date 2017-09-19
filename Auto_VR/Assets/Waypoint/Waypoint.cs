@@ -138,7 +138,6 @@ public class Waypoint : MonoBehaviour
 	{
 		_state = _state == State.Focused ? State.Clicked : _state;
 		
-		_audio_source.Play();
 
 		Camera.main.transform.parent.transform.position 	= gameObject.transform.position;
         WaypointManager.Instance.SetCurrent(gameObject.transform.parent.tag);
@@ -147,6 +146,10 @@ public class Waypoint : MonoBehaviour
         gameObject.transform.GetComponentInChildren<MeshCollider>().enabled = false;*/
     }
 
+    public void PlaySound()
+    {
+        _audio_source.Play();
+    }
 
 	private void Idle()
 	{

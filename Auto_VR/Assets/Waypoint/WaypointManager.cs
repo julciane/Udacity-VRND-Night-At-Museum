@@ -8,7 +8,7 @@ public class WaypointManager : MonoBehaviour {
     private Dictionary<string, GameObject> _waypointList = new Dictionary<string, GameObject>();
 
     public static WaypointManager Instance = null;
-    GameObject activeWaypoint;
+    public GameObject activeWaypoint;
 
     private void Awake()
     {
@@ -25,14 +25,14 @@ public class WaypointManager : MonoBehaviour {
 
     public void SetCurrent(string waypointName)
     {
-        GameObject previousWaypint = activeWaypoint;
+        GameObject previousWaypoint = activeWaypoint;
 
         if (_waypointList.TryGetValue(waypointName, out activeWaypoint))
         {
             //Cleanup previous waypoint
-            if (previousWaypint != null)
+            if (previousWaypoint != null)
             {
-                foreach (Transform child in previousWaypint.transform)
+                foreach (Transform child in previousWaypoint.transform)
                 {
                     if (child.CompareTag("Canvas"))
                     {
@@ -41,6 +41,7 @@ public class WaypointManager : MonoBehaviour {
                     else if (child.CompareTag("Waypoint"))
                     {
                         child.transform.gameObject.SetActive(true);
+                        child.transform.gameObject.SendMessage("PlaySound");
                     }
                 }
             }
