@@ -137,10 +137,19 @@ public class Waypoint : MonoBehaviour
 	public void Click()
 	{
 		_state = _state == State.Focused ? State.Clicked : _state;
-		
 
-		Camera.main.transform.parent.transform.position 	= gameObject.transform.position;
         WaypointManager.Instance.SetCurrent(gameObject.transform.parent.tag);
+        WaypointManager.Instance.isMoving = true;
+
+        iTween.MoveTo(Camera.main.transform.parent.gameObject, 
+				iTween.Hash (
+					"position", gameObject.transform.position, 
+					"time", .5F, 
+					"easetype", "linear"
+				)
+			);
+		/*Camera.main.transform.parent.transform.position 	= gameObject.transform.position;*/
+        
 
         /*gameObject.transform.GetComponentInChildren<MeshRenderer>().enabled = false;
         gameObject.transform.GetComponentInChildren<MeshCollider>().enabled = false;*/

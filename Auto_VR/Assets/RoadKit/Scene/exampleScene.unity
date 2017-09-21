@@ -214,6 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8186586}
   - component: {fileID: 8186585}
+  - component: {fileID: 8186587}
   m_Layer: 0
   m_Name: WaypointManager
   m_TagString: Untagged
@@ -239,6 +240,8 @@ MonoBehaviour:
   - {fileID: 1921905977}
   - {fileID: 1668035642}
   activeWaypoint: {fileID: 2039407186}
+  isMoving: 0
+  deltaDistance: 10
 --- !u!4 &8186586
 Transform:
   m_ObjectHideFlags: 0
@@ -252,6 +255,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &8186587
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 8186584}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &8880568
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +412,7 @@ MonoBehaviour:
   scale_idle_max: 0.1
   scale_focus_min: 0.1
   scale_focus_max: 0.1
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &8880572
 MonoBehaviour:
@@ -2894,7 +2977,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &410436862
 MonoBehaviour:
@@ -3525,7 +3608,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &455203295
 MonoBehaviour:
@@ -4206,7 +4289,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &533320135
 MonoBehaviour:
@@ -5787,7 +5870,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &714857482
 MonoBehaviour:
@@ -6575,7 +6658,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &831820005
 MonoBehaviour:
@@ -8223,7 +8306,7 @@ MonoBehaviour:
   scale_idle_max: 0.1
   scale_focus_min: 0.1
   scale_focus_max: 0.1
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &1000645666
 MonoBehaviour:
@@ -8410,7 +8493,7 @@ MonoBehaviour:
   scale_idle_max: 1.25
   scale_focus_min: 1.25
   scale_focus_max: 2
-  clip_click: {fileID: 8300000, guid: 6c356af72fc076646a2870e4f6166069, type: 3}
+  clip_click: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
   threshold: 0.125
 --- !u!114 &1005923824
 MonoBehaviour:
