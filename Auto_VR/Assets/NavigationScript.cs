@@ -26,13 +26,10 @@ public class NavigationScript : MonoBehaviour {
     public void LoadFeature()
     {
         Camera.main.transform.parent.transform.position = _featurePoint.position;
-
-        //Camera.main.transform.parent.transform.rotation = _featurePoint.rotation;
     }
 
     private IEnumerator loadAsync()
     {
-        Debug.Log("Load Feature!!");
         videoPlayer = transform.GetComponentInChildren<VideoPlayer>();
         if (videoPlayer != null)
         {
@@ -44,8 +41,6 @@ public class NavigationScript : MonoBehaviour {
         }
 
         Camera.main.transform.parent.transform.position = _featurePoint.position;
-
-        //Camera.main.transform.parent.transform.rotation = _featurePoint.rotation;
     }
 
     public void LoadScene(string sceneName)

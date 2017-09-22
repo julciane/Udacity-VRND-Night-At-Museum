@@ -29,12 +29,13 @@ public class WaypointManager : MonoBehaviour {
 
         audioSource = GetComponent<AudioSource>();
     }
+
     private void Update()
     {
         if (isMoving)
         {
             currentDistance = Vector3.Distance(Camera.main.transform.parent.transform.position, activeWaypoint.transform.position);
-            Debug.Log("currentDistance " + currentDistance);
+
             if (currentDistance < deltaDistance)
             {
                 isMoving = false;
@@ -49,7 +50,6 @@ public class WaypointManager : MonoBehaviour {
                         else if (child.CompareTag("Waypoint"))
                         {
                             child.transform.gameObject.SetActive(true);
-                            //child.transform.gameObject.SendMessage("PlaySound");
                         }
                     }
                 }
@@ -76,36 +76,7 @@ public class WaypointManager : MonoBehaviour {
 
         if (_waypointList.TryGetValue(waypointName, out activeWaypoint))
         {
-            audioSource.Play();
-            //Cleanup previous waypoint
-            /*if (previousWaypoint != null)
-            {
-                foreach (Transform child in previousWaypoint.transform)
-                {
-                    if (child.CompareTag("Canvas"))
-                    {
-                        child.transform.gameObject.SetActive(false);
-                    }
-                    else if (child.CompareTag("Waypoint"))
-                    {
-                        child.transform.gameObject.SetActive(true);
-                        child.transform.gameObject.SendMessage("PlaySound");
-                    }
-                }
-            }
-
-            //Setup new waypoint
-            foreach (Transform child in activeWaypoint.transform)
-            {
-                if (child.CompareTag("Canvas"))
-                {
-                    child.transform.gameObject.SetActive(true);
-                }
-                else if (child.CompareTag("Waypoint"))
-                {
-                    child.transform.gameObject.SetActive(false);
-                }
-            }*/
+            audioSource.Play();            
         }
     }
 }

@@ -21,6 +21,7 @@ public class MirrorRotation : MonoBehaviour {
 
     public void Click()
     {
+        //State machine
         switch (currentSide)
         {
             case Sides.Front:
