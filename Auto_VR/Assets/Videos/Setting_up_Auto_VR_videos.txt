@@ -1,0 +1,9 @@
+1-) Adding videos inside Assets\Videos
+https://www.youtube.com/watch?v=jvCKXADeW34 -> rename it to "360 Fatal Car Crash Accident.mp4"
+https://www.youtube.com/watch?v=9QRxO2HVUvA -> rename it to "Mercedes-Benz original.mp4"
+https://www.youtube.com/watch?v=EwL-40l44QA -> rename it to "Virtual Assembling Training – Volkswagen VR.mp4"
+
+2-) Setting up Audio source inside to Video Player objects
+a-) Click at Reverse_Sphere_Car_Crash and drag and the audio source object to it
+b-) Click at Reverse_Sphere_drive_around and drag and the audio source object to it
+c-) Click at Box_Room_Cinema -> Quad and drag and the audio source object to it
